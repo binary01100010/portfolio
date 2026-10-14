@@ -1,0 +1,3 @@
+npm install	Installiert Bibliotheken
+@ngx-translate/core	Enthält TranslatePipe und TranslateService
+@ngx-translate/http-loader	Lädt die Übersetzungen aus JSON-Dateien
