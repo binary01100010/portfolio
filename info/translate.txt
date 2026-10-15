@@ -1,0 +1,28 @@
+npm install	Installiert Bibliotheken
+@ngx-translate/core	Enthält TranslatePipe und TranslateService
+@ngx-translate/http-loader	Lädt die Übersetzungen aus JSON-Dateien
+
+--
+
+"assets"	Legt fest, welche statischen Dateien bereitgestellt werden
+[ ]	Eine Liste mit Regeln
+{ }	Eine einzelne Regel
+"glob"	Bestimmt, welche Dateien ausgewählt werden
+"**/*"	Wählt alle Dateien im Ordner und seinen Unterordnern aus
+"input": "public"	Legt den Quellordner public fest
+
+--
+
+Dateien im Ordner public werden nicht automatisch wie 
+TypeScript- und HTML-Dateien als Anwendungscode verarbeitet.
+
+Damit sagen wir Angular: „Übernimm alle Dateien und Unterordner 
+aus public unverändert in den fertigen Build, damit sie später 
+über eigene URLs erreichbar sind.“
+
+--
+
+Merksatz: Der Angular-Build beachtet die Regeln aus angular.json, 
+stellt dadurch die Sprachdateien bereit und schafft somit eine 
+wichtige Voraussetzung dafür, dass die Übersetzung mit 
+ngx-translate funktioniert.
