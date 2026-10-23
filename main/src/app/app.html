@@ -1,9 +1,4 @@
 <h1>{{ 'WELCOME' | translate }}</h1>
-<!-- Durch den Import von TranslatePipe und den Eintrag in imports erkennt Angular das Wort translate
-im HTML und kann damit Texte übersetzen. -->
 <p>{{ 'SETTINGS' | translate }}</p>
-
-<button (click)="changeLanguage('de')">Deutsch</button>
-
-<button (click)="changeLanguage('en')">English</button>
+<app-header></app-header>
 <router-outlet />

@@ -38,16 +38,24 @@ export const appConfig: ApplicationConfig = {
 
       // loader → Bestimmt, wie die Sprachdateien geladen werden.
       // provideTranslateHttpLoader() → Lädt die Sprachdateien über HTTP vom Webserver.
-      // Der Loader holt die Sprachdatei vom Webserver und liefert ihre Übersetzungsdaten an den TranslateService
+      // Der Loader holt die Sprachdatei vom Webserver und liefert ihre Übersetzungsdaten
+      // an den TranslateService
+      // provideTranslateHttpLoader() ist eine Funktion, die aus der externen
+      // Bibliothek @ngx-translate/http-loader importiert und anschließend in deinem
+      // Angular-Projekt verwendet wird.
+      // Verantowklich für das LAden die Funktion
       loader: provideTranslateHttpLoader({
-        // prefix: '/i18n/' → Gibt den Ordnerpfad der Sprachdateien an.
+        // prefix: '/i18n/' → Gibt den Ordnerpfad der Sprachdateien an. Argument = feste Werte
         prefix: '/i18n/',
-        // suffix: '.json' → Gibt die Dateiendung an.
+        // suffix: '.json' → Gibt die Dateiendung an. Argument = feste Werte
         suffix: '.json',
       }),
     }),
   ],
 };
+
+// Der HTTP-Loader lädt die benötigten Sprachdateien bei Bedarf vom Server und der
+// TranslateService verwendet die Übersetzungen der aktuell ausgewählten Sprache.
 
 // Die app.config.ts ist die zentrale Konfigurationsdatei von
 // Angular, in der Dienste und Einstellungen global bereitgestellt
