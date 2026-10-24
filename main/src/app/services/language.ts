@@ -1,4 +1,4 @@
-import { Injectable, inject } from '@angular/core';
+import { Injectable, inject, signal } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
@@ -7,7 +7,10 @@ import { TranslateService } from '@ngx-translate/core';
 export class Language {
   translate = inject(TranslateService);
 
+  selectedLanguage = signal<'de' | 'en'>('de');
+
   changeLanguage(lang: 'de' | 'en'): void {
     this.translate.use(lang);
+    this.selectedLanguage.set(lang);
   }
 }

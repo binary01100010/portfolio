@@ -1,23 +1,53 @@
+:host {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+}
+
 header {
   display: flex;
-  border: red 2px solid;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  padding: 37px 100px;
+  box-sizing: border-box;
+  background-color: #141d2f;
+  img {
+    width: 50px;
+  }
   .hRight {
-    border: blue 2px solid;
     display: flex;
     align-items: center;
+    gap: 92px;
+    width: 524px;
     .hRightThree {
       display: flex;
-      border: green 2px solid;
+      gap: 29px;
       p {
         margin-right: 10px;
+        color: white;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
       }
     }
     .hRightLanguage {
-      border: yellow 2px solid;
       display: flex;
+      justify-content: center;
+      align-items: center;
+
       button {
-        margin-right: 10px;
+        margin: 0 10px;
+        background-color: #141d2f;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #70e61c;
+        cursor: pointer;
+
+        &.active {
+          background-color: #70e61c;
+        }
       }
     }
   }

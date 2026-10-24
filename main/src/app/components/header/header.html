@@ -1,5 +1,5 @@
 <header>
-  <h1>Gregor</h1>
+  <img src="icon/g.png" alt="logo of website" />
   <div class="hRight">
     <div class="hRightThree">
       <p>About me</p>
@@ -7,8 +7,21 @@
       <p>Portfolio</p>
     </div>
     <div class="hRightLanguage">
-      <button (click)="language.changeLanguage('de')">Deutsch</button>
-      <button (click)="language.changeLanguage('en')">English</button>
+      <div class="hRightLanguage">
+        <button
+          (click)="language.changeLanguage('de')"
+          [class.active]="language.selectedLanguage() === 'de'"
+        >
+          DE
+        </button>
+
+        <button
+          (click)="language.changeLanguage('en')"
+          [class.active]="language.selectedLanguage() === 'en'"
+        >
+          EN
+        </button>
+      </div>
     </div>
   </div>
 </header>
